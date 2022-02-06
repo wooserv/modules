@@ -1,0 +1,13 @@
+import SamplePage from './views/SamplePage.vue'
+import moduleLocales from '~/locales/locales'
+import '../sass/module.scss'
+
+window.Hsabi.booting((app, router) => {
+  window.Hsabi.addMessages(moduleLocales)
+
+  router.addRoute({
+    path: '/$LOWER_NAME$/sample-page',
+    component: SamplePage,
+  })
+
+})
